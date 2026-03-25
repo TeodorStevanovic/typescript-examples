@@ -14,3 +14,27 @@ const person: User = {
 }
 
 console.log(printUser.call(person));
+
+//******************************************************************//
+
+type UserName = {
+    name: string
+}
+
+function greet(this: UserName) {
+    return `Hello my name is ${this.name}`;
+}
+
+const userOne: UserName = {
+    name: "Teodor"
+}
+
+const userTwo: UserName = {
+    name: "Jovan"
+}
+
+const greetUserOne = greet.bind(userOne);
+const greetUserTwo = greet.bind(userTwo);
+
+console.log(greetUserOne())
+console.log(greetUserTwo())
