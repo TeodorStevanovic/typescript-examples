@@ -22,13 +22,10 @@ const greetUserTwo = greet.bind(userTwo);
 console.log(greetUserOne());
 console.log(greetUserTwo());
 function findMax() {
-    let max;
     if (this.numbers.length === 0) {
         throw Error("Array is empty!");
     }
-    else {
-        max = this.numbers[0];
-    }
+    let max = this.numbers[0];
     for (let n = 1; n < this.numbers.length; n++) {
         if (this.numbers[n] > max) {
             max = this.numbers[n];
