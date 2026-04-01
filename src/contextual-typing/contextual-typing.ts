@@ -13,3 +13,13 @@ console.log("********************")
 repeat(3, (i) => {
     console.log(i * 2)
 })
+
+//*********************************************//
+
+function run(fn: (x: number) => void) {
+    fn(10)
+}
+
+run((x) => {
+    console.log(x)
+})

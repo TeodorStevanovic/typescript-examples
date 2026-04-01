@@ -12,4 +12,11 @@ console.log("********************");
 repeat(3, (i) => {
     console.log(i * 2);
 });
+//*********************************************//
+function run(fn) {
+    fn(10);
+}
+run((x) => {
+    console.log(x);
+});
 //# sourceMappingURL=contextual-typing.js.map
