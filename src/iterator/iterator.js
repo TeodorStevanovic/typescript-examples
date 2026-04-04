@@ -60,4 +60,12 @@ const arrNum = {
 for (let numb of arrNum) {
     console.log(numb);
 }
+console.log("*********************************************************");
+//*******************************************************************//
+const mySet = new Set([1, 2, 2, 3, 4]);
+for (const n of mySet) {
+    if (n % 2 === 0) {
+        console.log(n);
+    }
+}
 //# sourceMappingURL=iterator.js.map
