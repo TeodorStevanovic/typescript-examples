@@ -47,4 +47,17 @@ const it = iterator();
 console.log(it.next());
 console.log(it.next());
 console.log(it.next());
+console.log("*********************************************************");
+//*******************************************************************//
+const arrNum = {
+    data: [1, 2, 3],
+    *[Symbol.iterator]() {
+        for (let n = 0; n < this.data.length; n++) {
+            yield this.data[n];
+        }
+    }
+};
+for (let numb of arrNum) {
+    console.log(numb);
+}
 //# sourceMappingURL=iterator.js.map

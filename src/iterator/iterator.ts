@@ -38,10 +38,10 @@ function iterator() {
             if (i < arr.length) {
                 let curr = arr[i]
                 i++
-                return {value: curr, done: false}
+                return { value: curr, done: false }
             }
             else {
-                 return {value: undefined, done: true}
+                return { value: undefined, done: true }
             }
         }
     }
@@ -52,3 +52,20 @@ const it = iterator();
 console.log(it.next())
 console.log(it.next())
 console.log(it.next())
+
+console.log("*********************************************************")
+
+//*******************************************************************//
+
+const arrNum = {
+    data: [1, 2, 3],
+    *[Symbol.iterator]() {
+        for (let n = 0; n < this.data.length; n++) {
+            yield this.data[n]
+        }
+    }
+}
+
+for (let numb of arrNum) {
+    console.log(numb)
+}
