@@ -28,3 +28,19 @@ const sumAll: Fn = (start, ...nums) => {
 }
 
 console.log(sumAll(20, 1, 2, 3));
+console.log("**********************")
+
+//***********************************//
+
+type Square = (a: unknown) => number | string;
+
+const sqr: Square = (a) => {
+    if (typeof a === 'number') {
+        return a ** 2;
+    }
+    else {
+        return `Invalid input`;
+    }
+}
+
+console.log(sqr("Teodor"))
