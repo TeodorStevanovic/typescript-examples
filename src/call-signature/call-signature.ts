@@ -1,13 +1,15 @@
-type Greeting = (name: string) => string;
+type StringLength = (str: string) => number;
 
-const fn: Greeting = (name) => `Hello, ${name}`;
+const numberLetters: StringLength = (str) => {
+    if (str.length === 0) {
+        return 0;
+    }
+    else {
+        return str.length;
+    }
+}
 
-console.log(fn("Teodor"));
+console.log(numberLetters("Teodor"));
+console.log("**********************")
 
-//******************************************//
-
-type Numbers = (a: number, b: number) => number;
-
-const sum: Numbers = (a, b) => a + b;
-
-console.log(sum(2, 2));
+//***********************************//
