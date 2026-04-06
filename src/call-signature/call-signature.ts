@@ -18,13 +18,14 @@ type Fn = (start: number, ...nums: number[]) => number;
 
 const sumAll: Fn = (start, ...nums) => {
 
-    let num = 0;
+   
+        let num = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        num += nums[i]
-    }
+        for (const n of nums) {
+            num += n;
+        }
 
-    return start + num;
+        return start + num;
 }
 
 console.log(sumAll(20, 1, 2, 3));
@@ -44,3 +45,7 @@ const sqr: Square = (a) => {
 }
 
 console.log(sqr("Teodor"))
+console.log("**********************")
+
+//***********************************//
+

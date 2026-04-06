@@ -12,8 +12,8 @@ console.log(numberLetters("Teodor"));
 console.log("**********************");
 const sumAll = (start, ...nums) => {
     let num = 0;
-    for (let i = 0; i < nums.length; i++) {
-        num += nums[i];
+    for (const n of nums) {
+        num += n;
     }
     return start + num;
 };
@@ -28,4 +28,6 @@ const sqr = (a) => {
     }
 };
 console.log(sqr("Teodor"));
+console.log("**********************");
+//***********************************//
 //# sourceMappingURL=call-signature.js.map
