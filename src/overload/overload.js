@@ -1,17 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const order = (parametar) => {
-    if ("quantity" in parametar) {
-        return `${parametar.name} | ${parametar.quantity}`;
-    }
-    else if ("discount" in parametar) {
-        return `Name product: ${parametar.name} | Discount: ${parametar.discount}%`;
+const convert = (inp) => {
+    if (typeof inp === "number") {
+        return inp.toString();
     }
     else {
-        return parametar.name;
+        return inp.length;
     }
 };
-console.log(order({ name: "Igracka" }));
-console.log(order({ name: "Telefon", quantity: 20 }));
-console.log(order({ name: "Lopta", discount: 50 }));
+console.log(convert(123));
 //# sourceMappingURL=overload.js.map
