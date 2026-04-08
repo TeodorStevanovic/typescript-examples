@@ -12,3 +12,23 @@ function convert(inp: number | string) {
 
 console.log(convert(123));
 console.log(convert("Teodor"));
+
+console.log("***************************")
+//*******************************************//
+
+type UserInfo = {
+    (firstName: string, lastName: string): string
+    (firstName: string): string
+}
+
+let printUser: UserInfo = (firstName: string, lastName?: string) => {
+    if (typeof lastName === "undefined") {
+        return `${firstName}`;
+    }
+    else {
+        return `${firstName} ${lastName}`;
+    }
+}
+
+console.log(printUser("Teodor"))
+console.log(printUser("Teodor", "Stevanovic"))
